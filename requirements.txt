@@ -1,0 +1,5 @@
+openai
+langchain==0.0.292
+python-dotenv
+tiktoken
+momento
