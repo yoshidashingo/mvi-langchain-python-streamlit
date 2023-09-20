@@ -1,4 +1,4 @@
-import dotenv
+from dotenv import load_dotenv
 import os
 
 # For setting up the Momento Vector Index and langchain Vector Store
@@ -14,7 +14,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 
-load_env
+load_dotenv()
 
 if os.environ.get('MOMENTO_AUTH_TOKEN') is None:
     raise ValueError("MOMENTO_AUTH_TOKEN is not set")
