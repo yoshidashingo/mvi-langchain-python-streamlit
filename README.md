@@ -23,7 +23,11 @@ raw_documents = TextLoader('data/state-of-the-union.txt').load()
 ```sh
 $ pip install -r requirements.txt
 ```
-6. Run streamlit like `$ xxxxxxx`.
+6. Run streamlit
+```sh
+streamlit run app.py
+```
+
 7. Access to `http://localhost:8051`.
 8. Ask sometiong about your data.
 
