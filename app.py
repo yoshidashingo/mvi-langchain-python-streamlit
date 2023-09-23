@@ -23,7 +23,7 @@ if prompt := st.chat_input():
     db = MomentoVectorIndex(embedding_function=OpenAIEmbeddings(),
         configuration=VectorIndexConfigurations.Default.latest(),
         credential_provider=CredentialProvider.from_environment_variable("MOMENTO_AUTH_TOKEN"),
-        index_name="state-of-the-union")
+        index_name="sample")
     qa_chain = RetrievalQA.from_chain_type(llm, retriever=db.as_retriever())
     response = qa_chain({"query": prompt})
     st.session_state.messages.append({

@@ -9,8 +9,8 @@ def delete():
     db = MomentoVectorIndex(embedding_function=OpenAIEmbeddings(),
         configuration=VectorIndexConfigurations.Default.latest(),
         credential_provider=CredentialProvider.from_environment_variable("MOMENTO_AUTH_TOKEN"),
-        index_name="state-of-the-union")
-    db._client.delete_index(index_name="state-of-the-union")
+        index_name="sample")
+    db._client.delete_index(index_name="sample")
     print('finish delete')
     
 delete()

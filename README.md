@@ -14,22 +14,35 @@ This repository is originally made for ServerlessDays Tokyo 2023 Momento Hands-o
 ## Getting Started
 1. Copy `.env.template` to `.env`.
 2. Get and fill the API key to `MOMENTO_AUTH_TOKEN` and `OPENAI_API_KEY` in `.env`.
-3. Change the source data in `data/`.
-4. Change from the source data path in `app.py`.
-```py
-raw_documents = TextLoader('data/state-of-the-union.txt').load()
+3. Change the source data in `data/sample.txt`.
+4. create virtual environment
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
 ```
+
 5. Install the libraries.
 ```sh
 $ pip install -r requirements.txt
 ```
-6. Run streamlit
+
+6. Generate vector data
+
+```
+python insert.py
+```
+
+7. Run streamlit, Access to `http://localhost:8051` and ask sometiong about your data
 ```sh
 streamlit run app.py
 ```
 
-7. Access to `http://localhost:8051`.
-8. Ask sometiong about your data.
+8. Delete vector data
+
+```sh
+python delete.py
+```
 
 ## Feedback
 You are welcome to discuss it on our discord.
