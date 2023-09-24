@@ -18,6 +18,15 @@ This repository is originally made for ServerlessDays Tokyo 2023 Momento Hands-o
 4. Create virtual environment
 
 ```sh
+curl https://pyenv.run | bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+exec "$SHELL"
+pyenv --version
+sudo yum remove -y openssl-devel
+sudo yum install -y openssl11-devel bzip2-devel xz-devel
+pyenv install 3.10
 python3 -m venv .venv
 . .venv/bin/activate
 ```
