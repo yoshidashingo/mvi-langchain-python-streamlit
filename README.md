@@ -27,6 +27,8 @@ pyenv --version
 sudo yum remove -y openssl-devel
 sudo yum install -y openssl11-devel bzip2-devel xz-devel
 pyenv install 3.10
+pyenv local 3.10
+rm -rf .venv
 python3 -m venv .venv
 . .venv/bin/activate
 ```
