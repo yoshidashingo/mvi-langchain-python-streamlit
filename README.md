@@ -15,7 +15,7 @@ This repository is originally made for ServerlessDays Tokyo 2023 Momento Hands-o
 1. Copy `.env.template` to `.env`.
 2. Get and fill the API key to `MOMENTO_AUTH_TOKEN` and `OPENAI_API_KEY` in `.env`.
 3. Change the source data in `data/sample.txt`.
-4. create virtual environment
+4. Create virtual environment
 
 ```sh
 python3 -m venv .venv
